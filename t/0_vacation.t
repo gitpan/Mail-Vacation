@@ -125,10 +125,12 @@ ok($o_vac->isok == 1 && $o_vac->messages == 0 && $o_vac->{_errors} == 0, '_reset
 	my $i_err = 0;
 
 	my ($to, @cc) = $o_vac->_track("\"xxx \" <$testfrom>", ['"Mail::Vacation" <vacation@rfi.net>']);
+	$to = '' unless $to;
 	($to =~ /^vacation\@rfi.net$/o && @cc == 0) 
 		or $i_err++, diag("_track clean: to($to) cc(@cc)");
 
 	($to, @cc) = $o_vac->_track("$testfrom", ['"Mail::Vacation" <xvacation@rfi.net>']);
+	$to = '' unless $to;
 	($to =~ /^xvacation\@rfi.net$/o && @cc == 0)
 		or $i_err++, diag("_track second entry: to($to) cc(@cc)");
 
@@ -138,6 +140,7 @@ ok($o_vac->isok == 1 && $o_vac->messages == 0 && $o_vac->{_errors} == 0, '_reset
 		' cc@rfi.net',
 		]
 	);
+	$to = '' unless $to;
 	($to =~ /^test2\@rfi.net$/o && @cc == 1 && $cc[0] =~ /^cc\@rfi.net$/o) 
 		or $i_err++, diag("_track ccs: to($to) cc(@cc)");
 

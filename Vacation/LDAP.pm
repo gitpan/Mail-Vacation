@@ -46,7 +46,7 @@ use warnings;
 use vars qw(@ISA $VERSION $DEBUG);
 $| = 1;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 our $DEBUG   = $Mail::Vacation::DEBUG || 0;
 # $Mail::Vacation::DEBUG = $DEBUG;
 

@@ -43,7 +43,7 @@ Logging is via syslog to /var/log/messages, (make sure syslogd is running!)
 
 =head1 SCRIPTS
 
-=over4
+=over 4
 
 =item vacation.pl
 
@@ -64,7 +64,7 @@ use strict;
 use warnings;
 $| = 1;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 our $DEBUG   = $Mail::Vacation::DEBUG || 0;
 
 =head1 SEE ALSO
@@ -196,6 +196,7 @@ sub _configure {
 			$self = $self->_error("no configuration($config) object($o_conf)");
 		} else {
 			$self->_log("configuration($config) object($o_conf) ok");
+			&Date_Init(); # set timezone
 		}
 	}	
 
