@@ -1,0 +1,17 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+Vacation/LDAP.pm
+Vacation.pm
+dbs/.exists
+conf/ldap.conf
+conf/vacation.conf
+scripts/cleanup.pl
+scripts/ldap.cgi
+scripts/ldap.pl
+scripts/test.cgi
+scripts/vacation.pl
+t/0_vacation.t
+t/1_ldap.t
+vacation/.vacation

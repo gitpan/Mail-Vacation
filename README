@@ -1,0 +1,37 @@
+Mail::Vacation version 0.01
+=====================
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+USAGE
+
+You should probably modify the 'conf/*.conf' entries for your own installation.
+
+Also each script (*.pl) will want to be pointed to the correct config file.
+
+DOCS
+
+For more info see 'perldoc Mail::Vacation'
+
+DEPENDENCIES
+
+See Makefile.PL
+
+COPYRIGHT AND LICENCE
+
+Put the correct copyright and licence information here.
+
+Copyright (C) 2002 Richard Foley 
+
+Sponsered by Octogon, Feldafing, Germany
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself. 
+
